@@ -12,10 +12,10 @@
 
 </head>
 
-<body>
+<body onload="iniciar()">
   <nav class="navbar bg-light sticky-top ">
-    <div class="container-fluid">
-      <span class="navbar-brand h1 m-lg-auto">Calculadora de Notas</span>
+    <div class="container-fluid text-center">
+      <span class="navbar-brand h1 m-auto">Calculadora de Notas</span>
     </div>
   </nav>
 
@@ -28,7 +28,7 @@
           </div>
           <div class="col-md-8 offset-md-3">
             <label>1ª Nota:</label>
-            <input type="number" class="form-control " id="B1_N1" placeholder="Nota do Aluno" required>
+            <input type="number" class="form-control " id="B1_N1" placeholder="Nota do Aluno" required >
           </div>
           <div class="col-md-8 offset-md-3">
             <label>2ª Nota:</label>
@@ -78,7 +78,7 @@
       </div>
       <div class="row">
         <div class="col"><br></div>
-        <input type="submit" class="btn btn-primary btn-sm rounded-pill" value="Calcular" onclick="calculo()">
+        <input type="button" class="btn btn-primary btn-sm rounded-pill" value="Calcular" onclick="calculo()">
       </div>
     </form>
     <div class="row">
@@ -91,33 +91,39 @@
         <input type="number" class="form-control border-info" id="resultado_freq" placeholder="Frequência do Aluno"
           disabled>
       </div>
-      <div class="col-md-4 ">
+      <div class="col-md-4">
         <label>Situação:</label>
-        <input type="text" class="form-control border-info" id="situacao" placeholder="Situação" disabled>
+        <input type="text" class="form-control border-info" id="situacao" placeholder="Situação"  disabled>
       </div>
     </div>
-    <form class="was-validated">
-      <div class="row">
-        <div class="col-12 offset-md-5">
-          <h1>Exame</h1>
+    <div  id="ex" >
+      <form class="was-validated">
+        <div class="row">
+          <div class="col-12 offset-md-5">
+            <h1>Exame</h1>
+          </div>
+          <div class="col-md-6 ">
+            <label>Nota do Exame:</label>
+            <input type="number" class="form-control" id="exame" placeholder="Nota do Exame" required>
+          </div>
+          <div class="col-md-6 ">
+            <br>
+            <input type="button" class="btn btn-primary" value="Calcular Exame" onclick="exames()">
+          </div>
         </div>
-        <div class="col-md-6 ">
-          <label>Nota do Exame:</label>
-          <input type="text" class="form-control" id="exame" placeholder="Nota do Exame" required>
-        </div>
-        <div class="col-md-6 ">
-          <br>
-          <input type="submit" class="btn btn-primary" value="Calcular Exame" onclick="exames()">
-        </div>
+      </form>
+      <div class="col-12">
+        <label>Situação:</label>
+        <input type="text" class="form-control border-info" id="ExameSituacao" placeholder="Situação" disabled>
       </div>
-    </form>
-    <div class="col-12">
-      <label>Situação:</label>
-      <input type="text" class="form-control border-info" id="ExameSituacao" placeholder="Situação" disabled>
     </div>
   </div>
   </div>
-
+<footer class="flex-shrink-0 py-4 bg-light text-black">
+  <div class=" container text-center">
+    <small>Copyright &copy; Eudes_Nunes</small>
+  </div>
+</footer>
 </body>
 
 </html>
