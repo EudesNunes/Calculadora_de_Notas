@@ -1,20 +1,12 @@
 
 function calculo() {
     /* -------------------Calculo das Notas------------------ */
-    var notas_B1 = [parseInt(B1_N1.value), parseInt(B1_N2.value), parseInt(B1_N3.value)]
-    var notas_B2 = [parseInt(B2_N1.value), parseInt(B2_N2.value), parseInt(B2_N3.value)]
-
+    var notas_B1 = (parseInt(B1_N1.value) + parseInt(B1_N2.value) + parseInt(B1_N3.value)) / 3
+    var notas_B2 = (parseInt(B2_N1.value) + parseInt(B2_N2.value) + parseInt(B2_N3.value)) / 3
+    var total = 0;
+    total = (notas_B1 + notas_B2) / 2;
     
-    var totprimeiro = 0;
-    for (var i = 0; i < notas_B1.length; i++) {
-        totprimeiro += notas_B1[i] / notas_B1.length;
-    }
-
-    var totsegundo = 0;
-    for (var i = 0; i < notas_B2.length; i++) {
-        totsegundo += notas_B2[i] / notas_B2.length;
-    }
-    resultado.value = ((totprimeiro + totsegundo) / 2).toFixed(2);
+    resultado.value = total.toFixed(2)
 
     /* -------------------Calculo da Frequencia------------------ */
 
