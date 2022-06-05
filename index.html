@@ -1,0 +1,123 @@
+<!doctype html>
+
+<head>
+  <title>Calculadora de Notas</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="principal.js"></script>
+  <!-- Bootstrap CSS v5.2.0-beta1 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <nav class="navbar bg-light sticky-top ">
+    <div class="container-fluid">
+      <span class="navbar-brand h1 m-lg-auto">Calculadora de Notas</span>
+    </div>
+  </nav>
+
+  <div class="container text-bg-dark p-3">
+    <form class="was-validated">
+      <div class="row">
+        <div class="col-6">
+          <div class="col-md-8 offset-md-5">
+            <h1>1ªBIMESTRE</h1>
+          </div>
+          <div class="col-md-8 offset-md-3">
+            <label>1ª Nota:</label>
+            <input type="number" class="form-control " id="B1_N1" placeholder="Nota do Aluno" required>
+          </div>
+          <div class="col-md-8 offset-md-3">
+            <label>2ª Nota:</label>
+            <input type="number" class="form-control" id="B1_N2" placeholder="Nota do Aluno" required>
+          </div>
+          <div class="col-md-8 offset-md-3">
+            <label>3ª Nota:</label>
+            <input type="number" class="form-control" id="B1_N3" placeholder="Nota do Aluno" required>
+          </div>
+
+          <div class="col-md-8 offset-md-3">
+            <label>Quantidade de Aulas:</label>
+            <input type="number" class="form-control" id="B1_qaulas" placeholder="Total de Aulas da Disciplina"
+              required>
+          </div>
+          <div class="col-md-8 offset-md-3">
+            <label>Faltas:</label>
+            <input type="number" class="form-control" id="B1_qfaltas" placeholder="Total de Faltas" required>
+          </div>
+
+        </div>
+        <div class="col-6">
+          <div class="col-md-8  offset-md-3">
+            <h1>2ªBIMESTRE</h1>
+          </div>
+          <div class="col-md-8 offset-md-1">
+            <label>1ª Nota:</label>
+            <input type="number" class="form-control" id="B2_N1" placeholder="Nota do Aluno" required>
+          </div>
+          <div class="col-md-8 offset-md-1">
+            <label>2ª Nota:</label>
+            <input type="number" class="form-control" id="B2_N2" placeholder="Nota do Aluno" required>
+          </div>
+          <div class="col-md-8 offset-md-1">
+            <label>3ª Nota:</label>
+            <input type="number" class="form-control" id="B2_N3" placeholder="Nota do Aluno" required>
+          </div>
+          <div class="col-md-8 offset-md-1">
+            <label>Quantidade de Aulas:</label>
+            <input type="number" class="form-control" id="B2_qaulas" placeholder="Total de Aulas" required>
+          </div>
+          <div class="col-md-8 offset-md-1">
+            <label>Faltas:</label>
+            <input type="number" class="form-control" id="B2_qfaltas" placeholder="Total de Faltas" required>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col"><br></div>
+        <input type="submit" class="btn btn-primary btn-sm rounded-pill" value="Calcular" onclick="calculo()">
+      </div>
+    </form>
+    <div class="row">
+      <div class="col-md-4 ">
+        <label>Média do Aluno:</label>
+        <input type="number" class="form-control border-info" id="resultado" placeholder="Média do Aluno" disabled>
+      </div>
+      <div class="col-md-4 ">
+        <label>Frequência de Participação:</label>
+        <input type="number" class="form-control border-info" id="resultado_freq" placeholder="Frequência do Aluno"
+          disabled>
+      </div>
+      <div class="col-md-4 ">
+        <label>Situação:</label>
+        <input type="text" class="form-control border-info" id="situacao" placeholder="Situação" disabled>
+      </div>
+    </div>
+    <form class="was-validated">
+      <div class="row">
+        <div class="col-12 offset-md-5">
+          <h1>Exame</h1>
+        </div>
+        <div class="col-md-6 ">
+          <label>Nota do Exame:</label>
+          <input type="text" class="form-control" id="exame" placeholder="Nota do Exame" required>
+        </div>
+        <div class="col-md-6 ">
+          <br>
+          <input type="submit" class="btn btn-primary" value="Calcular Exame" onclick="exames()">
+        </div>
+      </div>
+    </form>
+    <div class="col-12">
+      <label>Situação:</label>
+      <input type="text" class="form-control border-info" id="ExameSituacao" placeholder="Situação" disabled>
+    </div>
+  </div>
+  </div>
+
+</body>
+
+</html>
