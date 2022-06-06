@@ -1,8 +1,8 @@
 
 function calculo() {
     /* -------------------Calculo das Notas------------------ */
-    var notas_B1 = (parseInt(B1_N1.value) + parseInt(B1_N2.value) + parseInt(B1_N3.value)) / 3
-    var notas_B2 = (parseInt(B2_N1.value) + parseInt(B2_N2.value) + parseInt(B2_N3.value)) / 3
+    var notas_B1 = (parseFloat(B1_N1.value) + parseFloat(B1_N2.value) + parseFloat(B1_N3.value)) / 3
+    var notas_B2 = (parseFloat(B2_N1.value) + parseFloat(B2_N2.value) + parseFloat(B2_N3.value)) / 3
     var total = 0;
     total = (notas_B1 + notas_B2) / 2;
     
@@ -51,7 +51,7 @@ function calculo() {
 }
 
 function exames() {
-    var resexame = (((parseInt(resultado.value) + parseInt(exame.value)) / 2))
+    var resexame = (((parseFloat(resultado.value) + parseFloat(exame.value)) / 2))
     if (exame.value === "") {
         ExameSituacao.value = "Preencha o Campo Nota do Exame!"
         document.getElementById('ExameSituacao').style.backgroundColor ="red";
